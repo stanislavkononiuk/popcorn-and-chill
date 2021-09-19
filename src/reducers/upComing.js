@@ -4,7 +4,7 @@ const initialState = {
   movies: [],
 };
 
-export default function upComing(state = initialState, action) {
+export default function upComingReducer(state = initialState, action) {
   if (action.type === UPCOMING) {
     return {
       movies: [...action.upComing],

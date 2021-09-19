@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { popular } from '../actions/index';
 import Movie from '../components/Movie';
+import popularMovies from '../API/API';
 import movies from './movies';
 
 function MoviesList() {
   const movieExtent = 'https://image.tmdb.org/t/p/w342/';
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(popular(popularMovies()));
+  }, []);
+
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
       {movies.map((movie) => (

@@ -4,7 +4,7 @@ const initialState = {
   movies: [],
 };
 
-export default function topRated(state = initialState, action) {
+export default function topRatedReducer(state = initialState, action) {
   if (action.type === TOP_RATED) {
     return {
       movies: [...action.topRated],
