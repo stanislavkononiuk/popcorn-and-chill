@@ -18,7 +18,7 @@ export function upComing(upComing) {
 
 export function popular(popular) {
   return {
-    type: UPCOMING,
+    type: POPULAR,
     popular,
   };
 }
