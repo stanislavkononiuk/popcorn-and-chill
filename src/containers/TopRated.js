@@ -5,6 +5,7 @@ function TopRated() {
   return (
     <>
       <Movie />
+      top rated
     </>
   );
 }

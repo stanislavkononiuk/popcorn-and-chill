@@ -5,6 +5,7 @@ function Upcoming() {
   return (
     <>
       <Movie />
+      upcoming
     </>
   );
 }

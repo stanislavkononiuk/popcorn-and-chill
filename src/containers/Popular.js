@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { popular } from '../actions';
 import Movie from '../components/Movie';
-// import movies from './movies';
-import popularMovies from '../API/API';
+import { popularMovies } from '../API/API';
 
 function MoviesList() {
   const [nextPage, setNextPage] = useState(2);
@@ -35,16 +35,18 @@ function MoviesList() {
     setPreviousPage(previousPage - 1);
   }
   console.log(nextPage);
+  console.log(popMovies);
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
         {popMovies.map((movie) => (
-          <Movie
-            key={movie.id}
-            title={movie.title}
-            score={movie.vote_average}
-            imageScr={movieExtent + movie.poster_path}
-          />
+          <Link to={`detail/${movie.id}`} key={movie.id}>
+            <Movie
+              title={movie.title}
+              score={movie.vote_average}
+              imageScr={movieExtent + movie.poster_path}
+            />
+          </Link>
         ))}
       </div>
       <div>
