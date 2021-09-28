@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { popular } from '../actions';
 import Movie from '../components/Movie';
-import { popularMovies } from '../API/API';
+import { popularMovies, movieExtent } from '../API/API';
 
 function MoviesList() {
   const [nextPage, setNextPage] = useState(2);
   const [previousPage, setPreviousPage] = useState(0);
 
-  const movieExtent = 'https://image.tmdb.org/t/p/w342/';
   const dispatch = useDispatch();
   const popMovies = useSelector((state) => state.popularReducer.movies);
 
