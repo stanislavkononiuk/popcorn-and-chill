@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { popular, valueScore } from '../actions/index';
-import { popularMovies } from '../API/API';
+import { popularMovies, searchMovie } from '../API/API';
 import popcorn from '../images/popcorn.png';
 
 function Navbar() {
@@ -21,6 +21,11 @@ function Navbar() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    if (!searchValue) return;
+    searchMovie(searchValue).then((movies) => {
+      dispatch(popular(movies));
+    });
+    setSearchValue('');
   }
 
   function handleSearch(event) {

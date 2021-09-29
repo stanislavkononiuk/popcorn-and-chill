@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import millify from 'millify';
 import { useParams } from 'react-router-dom';
 import { movieDetails, movieExtent } from '../API/API';
+import generic from '../images/generic.jpg';
 
 function Detail() {
   const [detail, setDetail] = useState({});
@@ -30,7 +31,7 @@ function Detail() {
     <div>
       <div style={{ display: 'flex' }}>
         <div>
-          <img src={movieExtent + movieImg} alt={title} />
+          <img src={movieImg ? movieExtent + movieImg : generic} alt={title} />
         </div>
 
         <div>

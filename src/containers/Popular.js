@@ -12,6 +12,7 @@ function MoviesList() {
   const dispatch = useDispatch();
   const popMovies = useSelector((state) => state.popularReducer.movies);
 
+  console.log(popMovies);
   useEffect(() => {
     popularMovies().then((movies) => {
       dispatch(popular(movies));

@@ -21,3 +21,11 @@ export async function movieDetails(id) {
   const data = await response.json();
   return data;
 }
+
+export async function searchMovie(movie) {
+  const api = `https://api.themoviedb.org/3/search/movie?api_key=${key}&language=en-US&query=${movie}&page=&include_adult=false`;
+  const response = await fetch(api);
+  const data = await response.json();
+  console.log(data);
+  return data.results;
+}
