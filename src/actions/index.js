@@ -1,8 +1,9 @@
 export const POPULAR = 'POPULAR';
 export const UPCOMING = 'UPCOMING';
 export const TOP_RATED = 'TOP_RATED';
+export const SCORE = 'SCORE';
 
-export function topRated(topRated) {
+export function nextPage(topRated) {
   return {
     type: TOP_RATED,
     topRated,
@@ -20,5 +21,12 @@ export function popular(popular) {
   return {
     type: POPULAR,
     popular,
+  };
+}
+
+export function valueScore(valueScore) {
+  return {
+    type: SCORE,
+    valueScore,
   };
 }

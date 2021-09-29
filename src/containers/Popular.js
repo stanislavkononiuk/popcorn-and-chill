@@ -8,7 +8,7 @@ import { popularMovies, movieExtent } from '../API/API';
 function MoviesList() {
   const [nextPage, setNextPage] = useState(2);
   const [previousPage, setPreviousPage] = useState(0);
-
+  const rating = useSelector((state) => state.scoreReducer.score);
   const dispatch = useDispatch();
   const popMovies = useSelector((state) => state.popularReducer.movies);
 
@@ -19,7 +19,7 @@ function MoviesList() {
   }, [dispatch]);
 
   function moviesNextPage() {
-    popularMovies(nextPage).then((movies) => {
+    popularMovies(nextPage, rating).then((movies) => {
       dispatch(popular(movies));
     });
     setNextPage(nextPage + 1);
@@ -27,13 +27,12 @@ function MoviesList() {
   }
 
   function moviesPreviousPage() {
-    popularMovies(previousPage).then((movies) => {
+    popularMovies(previousPage, rating).then((movies) => {
       dispatch(popular(movies));
     });
     setNextPage(nextPage - 1);
     setPreviousPage(previousPage - 1);
   }
-  console.log(nextPage);
   console.log(popMovies);
   return (
     <>
