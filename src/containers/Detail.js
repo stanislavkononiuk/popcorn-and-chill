@@ -10,7 +10,6 @@ function Detail() {
     movieDetails(movieId).then((movie) => setDetail(movie));
   }, []);
 
-  console.log(detail.budget, typeof detail.budget);
   const {
     poster_path: movieImg,
     budget,

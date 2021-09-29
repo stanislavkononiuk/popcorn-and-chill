@@ -33,7 +33,6 @@ function MoviesList() {
     setNextPage(nextPage - 1);
     setPreviousPage(previousPage - 1);
   }
-  console.log(popMovies);
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
