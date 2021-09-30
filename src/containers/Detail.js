@@ -93,7 +93,8 @@ function Detail() {
               Budget:
               {millify(budget)}
             </p>
-            <p><a href={homePage} target="_blank" rel="noreferrer">homepage</a></p>
+            <p>homepage:</p>
+            <p><a href={homePage} target="_blank" rel="noreferrer">{title}</a></p>
           </div>
         </div>
       </div>

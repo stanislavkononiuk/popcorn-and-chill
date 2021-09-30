@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 body {
   background-color: #8697A6;
-  font-family: 'Anton', sans-serif;
-  color: rgb(173, 171, 171);
+  color: rgb(233, 232, 232);
+  font-family: 'Roboto', sans-serif;
 }
 .wraper {
   width: 1050px;
@@ -16,10 +18,12 @@ ul {
 
 h2 {
   color: rgb(233, 230, 230);
+  font-family: 'Anton', sans-serif;
 }
 
 .overview {
   color: rgb(173, 171, 171);
+  padding: 3px 8px;
 }
 
 .infoWraper{
@@ -30,4 +34,14 @@ h2 {
 
 .infoWraper:not(:last-of-type) {
   border-right: 1px solid wheat;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+a:hover {
+  color:rgb(173, 171, 171)
 }
