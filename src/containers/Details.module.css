@@ -1,0 +1,33 @@
+body {
+  background-color: #8697A6;
+  font-family: 'Anton', sans-serif;
+  color: rgb(173, 171, 171);
+}
+.wraper {
+  width: 1050px;
+  margin: 0 auto;
+  background-color: #000;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+h2 {
+  color: rgb(233, 230, 230);
+}
+
+.overview {
+  color: rgb(173, 171, 171);
+}
+
+.infoWraper{
+  padding-left: 5px 5px;
+  text-align: center;
+  width: 33%;
+}
+
+.infoWraper:not(:last-of-type) {
+  border-right: 1px solid wheat;
+}

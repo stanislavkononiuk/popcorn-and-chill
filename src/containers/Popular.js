@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { popular } from '../actions';
 import Movie from '../components/Movie';
 import { popularMovies, movieExtent } from '../API/API';
+import PopularCSS from './Popular.module.css';
 
 function MoviesList() {
   const [nextPage, setNextPage] = useState(2);
@@ -33,12 +34,12 @@ function MoviesList() {
     setNextPage(nextPage - 1);
     setPreviousPage(previousPage - 1);
   }
-  if (!popMovies) return 'loading...';
+
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+      <div className={PopularCSS.wrapper}>
         {popMovies.map((movie) => (
-          <Link to={`detail/${movie.id}`} key={movie.id}>
+          <Link className={PopularCSS.link} to={`detail/${movie.id}`} key={movie.id}>
             <Movie
               title={movie.title}
               score={movie.vote_average}
@@ -47,19 +48,19 @@ function MoviesList() {
           </Link>
         ))}
       </div>
-      <div>
+      <div className={PopularCSS.btnWraper}>
         {previousPage >= 1 && (
-        <button type="button" onClick={moviesPreviousPage}>
+        <button className={PopularCSS.btnLeft} type="button" onClick={moviesPreviousPage}>
           page:
           {' '}
           {previousPage}
         </button>
         )}
-        <h2>
+        <h3 className={PopularCSS.currentBtn}>
           current page:
           {nextPage - 1}
-        </h2>
-        <button type="button" onClick={moviesNextPage}>
+        </h3>
+        <button className={PopularCSS.btnRight} type="button" onClick={moviesNextPage}>
           page:
           {' '}
           {nextPage}

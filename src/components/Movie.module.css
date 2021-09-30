@@ -9,15 +9,26 @@
 }
 
 .movieWraper {
-    width: 346px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image {
+  height: 340px;
 }
 
 .infoWraper {
     background-color: #b7bfc7;
     padding-left: 10px;
+    height: 250px;
+}
+
+.movieWraper:hover > .infoWraper {
+    background-color: black;
+    transition: all .2s;
 }
 
 .score {
