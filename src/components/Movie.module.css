@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.header{
+    width: fit-content;
+    font-family: 'Anton', sans-serif;
+    text-transform: capitalize;
+    color: #8C4C27;
+    font-size: 28px;
+}
+
+.movieWraper {
+    width: 346px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoWraper {
+    background-color: #b7bfc7;
+    padding-left: 10px;
+}
+
+.score {
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    color: #BF8756;
+}

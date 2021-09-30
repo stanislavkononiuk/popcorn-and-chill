@@ -12,7 +12,6 @@ function MoviesList() {
   const dispatch = useDispatch();
   const popMovies = useSelector((state) => state.popularReducer.movies);
 
-  console.log(popMovies);
   useEffect(() => {
     popularMovies().then((movies) => {
       dispatch(popular(movies));
@@ -34,6 +33,7 @@ function MoviesList() {
     setNextPage(nextPage - 1);
     setPreviousPage(previousPage - 1);
   }
+  if (!popMovies) return 'loading...';
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>

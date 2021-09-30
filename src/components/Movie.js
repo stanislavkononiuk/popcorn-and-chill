@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Moviecss from './Movie.module.css';
 
 function Movie({ imageScr, score, title }) {
   return (
-    <div>
+    <div className={Moviecss.movieWraper} style={{ border: '1px solid red' }}>
       <img src={imageScr} alt={title} />
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <h2>{title}</h2>
-        <p>
+      <div className={Moviecss.infoWraper}>
+        <h2 className={Moviecss.header}>{title}</h2>
+        <p className={Moviecss.score}>
           score:
+          {' '}
           {score}
         </p>
       </div>

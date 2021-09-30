@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { popular, valueScore } from '../actions/index';
 import { popularMovies, searchMovie } from '../API/API';
 import popcorn from '../images/popcorn.png';
+import Navbarcss from './Navbar.module.css';
 
 function Navbar() {
   const [searchValue, setSearchValue] = useState('');
@@ -33,15 +34,15 @@ function Navbar() {
     setSearchValue(value);
   }
   return (
-    <nav style={{ display: 'flex', justifyContent: 'space-around', padding: '10px 5px' }}>
+    <nav className={Navbarcss.nav}>
       <div>
-        <Link to="/"><img style={{ height: '60px' }} src={popcorn} alt="logo" /></Link>
+        <Link to="/"><img className={Navbarcss.logo} src={popcorn} alt="logo" /></Link>
       </div>
       <form onSubmit={handleSubmit}>
-        <input value={searchValue} onChange={handleSearch} type="text" placeholder="search movie" />
-        <button type="submit">search</button>
+        <input value={searchValue} className={Navbarcss.search} onChange={handleSearch} type="text" placeholder="search movie" />
+        <button className={Navbarcss.btn} type="submit">search</button>
       </form>
-      <select value={rating} onChange={handleRating}>
+      <select value={rating} className={Navbarcss.select} onChange={handleRating}>
         <option value="choose a rating">choose a rating</option>
         <option value={9}>9+</option>
         <option value={8}>8+</option>
