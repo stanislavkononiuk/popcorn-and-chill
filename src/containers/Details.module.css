@@ -24,16 +24,18 @@ h2 {
 .overview {
   color: rgb(173, 171, 171);
   padding: 3px 8px;
+  font-weight: 800;
 }
 
 .infoWraper{
   padding-left: 5px 5px;
   text-align: center;
   width: 33%;
+  font-weight: 600;
 }
 
 .infoWraper:not(:last-of-type) {
-  border-right: 1px solid wheat;
+  border-right: 1px solid #BF8756;
 }
 
 a {
