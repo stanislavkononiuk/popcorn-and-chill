@@ -35,7 +35,6 @@ function MoviesList() {
     setNextPage(nextPage - 1);
     setPreviousPage(previousPage - 1);
   }
-
   return (
     <>
       <div className={PopularCSS.wrapper}>

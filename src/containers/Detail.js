@@ -27,6 +27,7 @@ function Detail() {
     genres,
   } = detail;
 
+  console.log(detail);
   if (!genres) return 'loading...';
   return (
     <div className={DetailsCSS.wraper}>
