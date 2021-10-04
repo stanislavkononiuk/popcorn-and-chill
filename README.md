@@ -20,8 +20,7 @@ This project consumes data from the TMDB (The Movie Data Base) api, it is a reac
 
 ![Screenshot-main-page](src/images/screenshot.png)
 ## features
-
-User can see wich movies are popular currently, user can also search movies based on their ratings or search for movies based on title, actor or related words and know details about any particular movie by clicking on it.
+Users can see which movies are popular currently, users can also search movies based on their ratings or search for movies based on title, actor, or related words and know details about any particular movie by clicking on it.
 ## Live Demo
 
 This project is hosted on Netlify.
