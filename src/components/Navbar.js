@@ -44,15 +44,15 @@ function Navbar() {
       </form>
       <select value={rating} className={NavbarCSS.select} onChange={handleRating}>
         <option value="choose a rating">choose a rating</option>
-        <option value={9}>9+</option>
-        <option value={8}>8+</option>
-        <option value={7}>7+</option>
-        <option value={6}>6+</option>
-        <option value={5}>5+</option>
-        <option value={4}>4+</option>
-        <option value={3}>3+</option>
-        <option value={2}>2+</option>
-        <option value={1}>1+</option>
+        <option value={9}>between 9 and 9.9</option>
+        <option value={8}>between 8 and 8.9</option>
+        <option value={7}>between 7 and 7.9</option>
+        <option value={6}>between 6 and 6.9</option>
+        <option value={5}>between 5 and 5.9</option>
+        <option value={4}>between 4 and 4.9</option>
+        <option value={3}>between 3 and 3.9</option>
+        <option value={2}>between 2 and 2.9</option>
+        <option value={1}>between 1 and 1.9</option>
       </select>
     </nav>
   );
