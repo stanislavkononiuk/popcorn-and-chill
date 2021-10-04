@@ -1,41 +1,41 @@
-.nav { 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #DFE7F2;
-    padding: 10px 5px;
-    margin-bottom: 23px;
-    margin-top: 0px;
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #dfe7f2;
+  padding: 10px 5px;
+  margin-bottom: 23px;
+  margin-top: 0;
 }
 
 .logo {
-    height: 60px;
+  height: 60px;
 }
 
 .btn {
-    background-color: #4A5B8C;
-    color: white;
-    padding: 7px 5px;
-    border: none;
+  background-color: #4a5b8c;
+  color: white;
+  padding: 7px 5px;
+  border: none;
 }
 
 .btn:hover {
-    background-color:#3a4872;
-    cursor: pointer;
+  background-color: #3a4872;
+  cursor: pointer;
 }
 
 .search {
-    padding: 5px 3px;
-    border: none;
-    outline:none;
+  padding: 5px 3px;
+  border: none;
+  outline: none;
 }
 
 .search:focus {
-    border: 1px solid #8697A6;
+  border: 1px solid #8697a6;
 }
 
 .select {
-    padding: 5px 3px;
-    border: 1px solid #8697A6;
-    outline: none;
+  padding: 5px 3px;
+  border: 1px solid #8697a6;
+  outline: none;
 }
