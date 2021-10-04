@@ -5,6 +5,7 @@ import { popular } from '../actions';
 import Movie from '../components/Movie';
 import { popularMovies, movieExtent } from '../API/API';
 import PopularCSS from './Popular.module.css';
+import generic from '../images/generic.jpg';
 
 function MoviesList() {
   const [nextPage, setNextPage] = useState(2);
@@ -43,7 +44,7 @@ function MoviesList() {
             <Movie
               title={movie.title}
               score={movie.vote_average}
-              imageScr={movieExtent + movie.poster_path}
+              imageScr={movieExtent + movie.poster_path || generic}
             />
           </Link>
         ))}
