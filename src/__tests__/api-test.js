@@ -26,6 +26,18 @@ describe('popularMovies()', () => {
       expect(movies[0]).toHaveProperty('vote_average');
     });
   });
+
+  it('Returns  an array wich first element is an object that doe not have a corresponding_cast propery', () => {
+    popularMovies().then((movies) => {
+      expect(movies[0]).not.toHaveProperty('corresponding_cast');
+    });
+  });
+
+  it('Returns  an array wich first element is an object that doe not have a leading_actor propery', () => {
+    popularMovies().then((movies) => {
+      expect(movies[0]).not.toHaveProperty('leading_actor');
+    });
+  });
 });
 describe('movieDetails()', () => {
   it('Return an object with a property budget', () => {
@@ -49,6 +61,18 @@ describe('movieDetails()', () => {
   it('Return an object with a property original_language', () => {
     movieDetails(568620).then((movie) => {
       expect(movie).toHaveProperty('original_language');
+    });
+  });
+
+  it('Return an object with no property casting_overseas', () => {
+    movieDetails(568620).then((movie) => {
+      expect(movie).not.toHaveProperty('casting_overseas');
+    });
+  });
+
+  it('Return an object with no property optional_languages', () => {
+    movieDetails(568620).then((movie) => {
+      expect(movie).not.toHaveProperty('optional_languages');
     });
   });
 });
