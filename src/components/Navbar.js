@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { popular, valueScore } from '../actions/index';
 import { popularMovies, searchMovie } from '../API/API';
+import Search from './Search';
 import popcorn from '../images/popcorn.png';
 import NavbarCSS from './Navbar.module.css';
 
@@ -39,10 +40,11 @@ const Navbar = () => {
       <div>
         <Link to="/"><img className={NavbarCSS.logo} src={popcorn} alt="logo" /></Link>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input value={searchValue} className={NavbarCSS.search} onChange={handleSearch} type="text" placeholder="search movie" />
-        <button className={NavbarCSS.btn} type="submit">search</button>
-      </form>
+      <Search
+        handleSearch={handleSearch}
+        handleSubmit={handleSubmit}
+        searchValue={searchValue}
+      />
       <select value={rating} className={NavbarCSS.select} onChange={handleRating}>
         <option value="choose a rating">choose a rating</option>
         <option value={9}>between 9 and 9.9</option>

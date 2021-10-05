@@ -1,0 +1,21 @@
+.btn {
+  background-color: #4a5b8c;
+  color: white;
+  padding: 7px 5px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #3a4872;
+  cursor: pointer;
+}
+
+.search {
+  padding: 5px 3px;
+  border: none;
+  outline: none;
+}
+
+.search:focus {
+  border: 1px solid #8697a6;
+}
