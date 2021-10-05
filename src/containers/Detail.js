@@ -5,7 +5,7 @@ import { movieDetails, movieExtent } from '../API/API';
 import generic from '../images/generic.jpg';
 import DetailsCSS from './Details.module.css';
 
-function Detail() {
+const Detail = () => {
   const [detail, setDetail] = useState({});
   const { id: movieId } = useParams();
   useEffect(() => {
@@ -100,6 +100,6 @@ function Detail() {
       </div>
     </div>
   );
-}
+};
 
 export default Detail;
