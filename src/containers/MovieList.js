@@ -7,7 +7,7 @@ import { popularMovies, movieExtent } from '../API/API';
 import PopularCSS from './Popular.module.css';
 import generic from '../images/generic.jpg';
 
-function MoviesList() {
+const MoviesList = () => {
   const [nextPage, setNextPage] = useState(2);
   const [previousPage, setPreviousPage] = useState(0);
   const rating = useSelector((state) => state.scoreReducer.score);
@@ -68,6 +68,6 @@ function MoviesList() {
       </div>
     </>
   );
-}
+};
 
 export default MoviesList;
