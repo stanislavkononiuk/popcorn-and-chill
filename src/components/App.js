@@ -1,14 +1,18 @@
 import React from 'react';
-import MoviesList from '../containers/MoviesList';
-import Navbar from './Navbar';
+import { Switch, Route } from 'react-router-dom';
+import Detail from '../containers/Detail';
 
-function App() {
-  return (
-    <>
-      <Navbar />
-      <MoviesList />
-    </>
-  );
-}
+import Navbar from './Navbar';
+import MoviesList from '../containers/MovieList';
+
+const App = () => (
+  <>
+    <Navbar />
+    <Switch>
+      <Route path="/" component={MoviesList} exact />
+      <Route path="/detail/:id" component={Detail} exact />
+    </Switch>
+  </>
+);
 
 export default App;

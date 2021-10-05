@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.btnWraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #4a5b8c;
+  padding: 7px 7px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.currentBtn {
+  font-family: 'Anton', sans-serif;
+}
+
+.btnLeft {
+  margin-right: 10px;
+}
+
+.btnRight {
+  margin-left: 10px;
+}

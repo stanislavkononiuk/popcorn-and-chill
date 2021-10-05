@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly the Details component 1`] = `
+<div
+  className="movieWraper"
+>
+  <img
+    alt="popcorn-n-chill"
+    className="image"
+    src="my image"
+  />
+  <div
+    className="infoWraper"
+  >
+    <h2
+      className="header"
+    >
+      popcorn-n-chill
+    </h2>
+    <p
+      className="score"
+    >
+      score:
+       
+      3
+    </p>
+  </div>
+</div>
+`;

@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Popcorn-and-chill
+## Table of contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [About](#about)
+- [Features](#features)
+- [Live Demo](#live-demo)
+- [Built with](#built-with)
+- [Getting started](#getting-started)
+  - [Installation instructions](#installation-instructions)
+  - [Testing](#testing)
+- [Author](#author)
+- [Show your support](#show-your-support)
+- [License](#-license)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+This project consumes data from the TMDB (The Movie Data Base) api, it is a react project built using redux and react hooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Screenshot-main-page](src/images/screenshot.png)
+## features
+Users can see which movies are popular currently, users can also search movies based on their ratings or search for movies based on title, actor, or related words and know details about any particular movie by clicking on it.
+## Live Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This project is hosted on Netlify.
 
-### `npm test`
+[Live demo link](https://popcorn-and-chill.netlify.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `npm run build`
+- [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+- [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+- React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow along the steps below to get a copy at your local machine.
 
-### `npm run eject`
+- Navigate to the directory where you want this project to clone and then clone it
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  ```
+  git clone git@github.com:helciodev/popcorn-and-chill.git
+  ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Navigate to the `math-popcorn-and-chill` directory
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  ```
+  cd popcorn-and-chill
+  ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Install the npm package with `npm install`
+- Start the server with `npm start`
+- The site should automatically open in your browser at http://localhost:3000/ if it didn't then open your browser with that link.
 
-## Learn More
+### testing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Run npm test to run tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Author
 
-### Code Splitting
+😎 **Helcio André**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- GitHub: [@helciodev](https://github.com/helciodev)
+- Twitter: [@helcio_bruno](https://twitter.com/helcio_bruno)
+- Linkedin: [Helcio Andre](https://www.linkedin.com/in/helcio-andre/)
 
-### Analyzing the Bundle Size
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions, issues, and feature requests are welcome!
 
-### Making a Progressive Web App
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.## Available Scripts

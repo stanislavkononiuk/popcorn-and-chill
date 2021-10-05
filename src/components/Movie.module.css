@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.header {
+  width: fit-content;
+  font-family: 'Anton', sans-serif;
+  text-transform: capitalize;
+  color: #8c4c27;
+  font-size: 28px;
+}
+
+.movieWraper {
+  width: 263px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.image {
+  height: 340px;
+}
+
+.infoWraper {
+  background-color: #b7bfc7;
+  padding-left: 10px;
+  height: 250px;
+}
+
+.movieWraper:hover > .infoWraper {
+  background-color: black;
+  transition: all 0.2s;
+}
+
+.score {
+  font-family: 'Anton', sans-serif;
+  font-weight: bolder;
+  color: #bf8756;
+}

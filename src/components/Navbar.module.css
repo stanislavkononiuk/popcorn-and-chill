@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #dfe7f2;
+  padding: 10px 5px;
+  margin-bottom: 23px;
+  margin-top: 0;
+}
+
+.logo {
+  height: 60px;
+}
+
+.select {
+  padding: 5px 3px;
+  border: 1px solid #8697a6;
+  outline: none;
+}
