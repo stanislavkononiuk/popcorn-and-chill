@@ -6,33 +6,34 @@ import { popularMovies, searchMovie } from '../API/API';
 import popcorn from '../images/popcorn.png';
 import NavbarCSS from './Navbar.module.css';
 
-function Navbar() {
+const Navbar = () => {
   const [searchValue, setSearchValue] = useState('');
   const dispatch = useDispatch();
   const rating = useSelector((state) => state.scoreReducer.score);
 
-  function handleRating(event) {
+  const handleRating = (event) => {
     const { value } = event.target;
     if (value === 'choose a rating') return;
     dispatch(valueScore(value));
     popularMovies(1, value).then((movies) => {
       dispatch(popular(movies));
     });
-  }
+  };
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (!searchValue) return;
     searchMovie(searchValue).then((movies) => {
       dispatch(popular(movies));
     });
     setSearchValue('');
-  }
+  };
 
-  function handleSearch(event) {
+  const handleSearch = (event) => {
     const { value } = event.target;
     setSearchValue(value);
-  }
+  };
+
   return (
     <nav className={NavbarCSS.nav}>
       <div>
@@ -56,6 +57,6 @@ function Navbar() {
       </select>
     </nav>
   );
-}
+};
 
 export default Navbar;
