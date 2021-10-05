@@ -1,17 +1,14 @@
 export const POPULAR = 'POPULAR';
 export const SCORE = 'SCORE';
-export const SEARCH = 'SEARCH';
 
-export function popular(popular) {
-  return {
-    type: POPULAR,
-    popular,
-  };
-}
+export const popular = (popular) => ({
+  type: POPULAR,
+  popular,
+});
 
-export function valueScore(valueScore) {
-  return {
+export const valueScore = (valueScore) => (
+  {
     type: SCORE,
     valueScore,
-  };
-}
+  }
+);
