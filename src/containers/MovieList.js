@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { popular } from '../actions';
 import Movie from '../components/Movie';
-import { popularMovies, movieExtent } from '../API/API';
+import { popularMovies } from '../API/API';
 import PopularCSS from './Popular.module.css';
-import generic from '../images/generic.jpg';
 
 const MoviesList = () => {
   const [nextPage, setNextPage] = useState(2);
@@ -43,7 +42,7 @@ const MoviesList = () => {
             <Movie
               title={movie.title}
               score={movie.vote_average}
-              imageScr={movieExtent + movie.poster_path || generic}
+              imageScr={movie.poster_path}
             />
           </Link>
         ))}

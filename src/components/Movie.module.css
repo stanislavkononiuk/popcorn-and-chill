@@ -9,7 +9,7 @@
 }
 
 .movieWraper {
-  width: 263px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,7 @@
 }
 
 .image {
-  height: 340px;
+  object-fit: cover;
 }
 
 .infoWraper {
