@@ -45,7 +45,7 @@ Follow along the steps below to get a copy at your local machine.
   git clone git@github.com:helciodev/popcorn-and-chill.git
   ```
 
-- Navigate to the `math-popcorn-and-chill` directory
+- Navigate to the `popcorn-and-chill` directory
 
   ```
   cd popcorn-and-chill
