@@ -17,3 +17,31 @@
   border: 1px solid #8697a6;
   outline: none;
 }
+
+@media screen and (min-width: 320px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .select {
+    margin-top: 1rem;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .select {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .select {
+    width: auto;
+  }
+}
