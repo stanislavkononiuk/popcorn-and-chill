@@ -17,7 +17,8 @@ const Detail = () => {
     budget,
     homepage: homePage,
     overview,
-    production_companies: productionCompanies, production_countries: productionCoutries,
+    production_companies: productionCompanies,
+    production_countries: productionCoutries,
     release_date: releaseDate,
     revenue,
     runtime,
@@ -38,63 +39,71 @@ const Detail = () => {
           <h2>{title}</h2>
           <p className={DetailsCSS.overview}>{overview}</p>
         </div>
-        <div style={{ display: 'flex' }}>
+        <div className={DetailsCSS.detailsWrapper}>
           <div className={DetailsCSS.infoWraper}>
             <p>
               duration:
               {' '}
+              {}
               {runtime}
               {' '}
               minutes
             </p>
             <p>
               average score:
-              {' '}
               {score}
             </p>
             <p>
               Revenue:
-              {' '}
-              { revenue > 0 ? millify(revenue) : 'not avaiable'}
+              {revenue > 0 ? millify(revenue) : 'not avaiable'}
             </p>
           </div>
           <div className={DetailsCSS.infoWraper}>
             <p>Genres: </p>
             <ul>
-              {genres.map((genre) => <li key={genre.name}>{genre.name}</li>)}
+              {genres.map((genre) => (
+                <li key={genre.name}>{genre.name}</li>
+              ))}
             </ul>
           </div>
           <div className={DetailsCSS.infoWraper}>
-
             <p>spoken languages: </p>
             <ul>
-              {spokenLanguages.map((lang) => <li key={lang.name}>{lang.english_name}</li>)}
+              {spokenLanguages.map((lang) => (
+                <li key={lang.name}>{lang.english_name}</li>
+              ))}
             </ul>
           </div>
           <div className={DetailsCSS.infoWraper}>
             <p>production companies: </p>
             <ul>
-              {productionCompanies.map((company) => <li key={company.name}>{company.name}</li>)}
+              {productionCompanies.map((company) => (
+                <li key={company.name}>{company.name}</li>
+              ))}
             </ul>
           </div>
           <div className={DetailsCSS.infoWraper}>
             <p>production countries: </p>
             <ul>
-              {productionCoutries.map((country) => <li key={country.name}>{country.name}</li>)}
+              {productionCoutries.map((country) => (
+                <li key={country.name}>{country.name}</li>
+              ))}
             </ul>
           </div>
           <div className={DetailsCSS.infoWraper}>
             <p>Release Date:</p>
-            <p>
-              {releaseDate}
-            </p>
+            <p>{releaseDate}</p>
             <p>
               {' '}
               Budget:
               {millify(budget)}
             </p>
             <p>homepage:</p>
-            <p><a href={homePage} target="_blank" rel="noreferrer">{title}</a></p>
+            <p>
+              <a href={homePage} target="_blank" rel="noreferrer">
+                {title}
+              </a>
+            </p>
           </div>
         </div>
       </div>

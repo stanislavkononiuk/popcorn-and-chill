@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 .header {
   width: fit-content;
-  font-family: 'Anton', sans-serif;
+  width: -moz-fit-content;
+  font-family: "Anton", sans-serif;
   text-transform: capitalize;
   color: #8c4c27;
   font-size: 28px;
@@ -14,6 +15,34 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 10px;
+  transition: all 0.4s;
+}
+
+@media screen and (min-width: 320px) {
+  .movieWraper {
+    width: 148px;
+  }
+}
+@media screen and (min-width: 375px) {
+  .movieWraper {
+    width: 175px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .movieWraper {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .movieWraper {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .movieWraper {
+    width: 275px;
+  }
 }
 
 .image {
@@ -25,6 +54,16 @@
   padding-left: 10px;
   height: 250px;
 }
+@media screen and (min-width: 320px) {
+  .infoWraper {
+    display: none;
+  }
+}
+@media screen and (min-width: 780px) {
+  .infoWraper {
+    display: block;
+  }
+}
 
 .movieWraper:hover > .infoWraper {
   background-color: black;
@@ -32,7 +71,7 @@
 }
 
 .score {
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   font-weight: bolder;
   color: #bf8756;
 }
