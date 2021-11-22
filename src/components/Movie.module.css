@@ -27,10 +27,17 @@
   .movieWraper {
     width: 175px;
   }
+  .image {
+    object-fit: cover;
+  }
 }
 @media screen and (min-width: 425px) {
   .movieWraper {
     width: 200px;
+  }
+
+  .image {
+    object-fit: cover;
   }
 }
 
@@ -38,10 +45,16 @@
   .movieWraper {
     width: 300px;
   }
+  .image {
+    object-fit: cover;
+  }
 }
 @media screen and (min-width: 1024px) {
   .movieWraper {
     width: 275px;
+  }
+  .image {
+    object-fit: cover;
   }
 }
 
