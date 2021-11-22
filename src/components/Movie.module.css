@@ -22,6 +22,9 @@
   .movieWraper {
     width: 160px;
   }
+  .image {
+    object-fit: cover;
+  }
 }
 @media screen and (min-width: 375px) {
   .movieWraper {
