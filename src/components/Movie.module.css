@@ -23,7 +23,7 @@
     width: 160px;
   }
   .image {
-    object-fit: cover;
+    width: 100%;
   }
 }
 @media screen and (min-width: 375px) {

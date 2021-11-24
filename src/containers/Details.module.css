@@ -37,8 +37,8 @@ h2 {
     flex-wrap: wrap;
   }
 
-  image {
-    object-fit: cover;
+  img {
+    width: 100%;
   }
 }
 
