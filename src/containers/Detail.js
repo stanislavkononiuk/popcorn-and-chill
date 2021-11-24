@@ -33,10 +33,14 @@ const Detail = () => {
     <div className={DetailsCSS.wraper}>
       <div>
         <div>
-          <img src={movieImg ? movieExtent + movieImg : generic} alt={title} />
+          <img
+            className={DetailsCSS.poster}
+            src={movieImg ? movieExtent + movieImg : generic}
+            alt={title}
+          />
         </div>
         <div>
-          <h2>{title}</h2>
+          <h2 style={{ textAlign: 'center', padding: '1px 3px' }}>{title}</h2>
           <p className={DetailsCSS.overview}>{overview}</p>
         </div>
         <div className={DetailsCSS.detailsWrapper}>
@@ -55,7 +59,7 @@ const Detail = () => {
             </p>
             <p>
               Revenue:
-              {revenue > 0 ? millify(revenue) : 'not avaiable'}
+              {revenue > 0 ? millify(revenue) : 'not available'}
             </p>
           </div>
           <div className={DetailsCSS.infoWraper}>

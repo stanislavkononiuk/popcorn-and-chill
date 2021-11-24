@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 body {
   background-color: #8697a6;
   color: rgb(233, 232, 232);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .wraper {
@@ -25,7 +25,7 @@ ul {
 
 h2 {
   color: rgb(233, 230, 230);
-  font-family: "Anton", sans-serif;
+  font-family: 'Anton', sans-serif;
 }
 
 .detailsWrapper {
@@ -35,9 +35,20 @@ h2 {
 @media screen and (min-width: 320px) {
   .detailsWrapper {
     flex-wrap: wrap;
+    flex-direction: column;
   }
 
-  img {
+  .infoWraper {
+    border-bottom: 1px solid #bf8756;
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+  }
+  .infoWraper p {
+    text-align: center;
+  }
+  .poster {
     width: 100%;
   }
 }
@@ -45,6 +56,21 @@ h2 {
 @media screen and (min-width: 768px) {
   .detailsWrapper {
     flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .poster {
+    width: auto;
+  }
+
+  .infoWraper {
+    padding: 5px 5px;
+    text-align: center;
+    font-weight: 600;
+    width: 43%;
+  }
+
+  .infoWraper:not(:last-of-type) {
+    border-right: 1px solid #bf8756;
   }
 }
 
@@ -52,22 +78,6 @@ h2 {
   color: rgb(245, 245, 245);
   padding: 3px 8px;
   font-weight: 800;
-}
-
-.infoWraper {
-  padding: 5px 5px;
-  text-align: center;
-  font-weight: 600;
-  width: 43%;
-}
-
-@media screen and (width: 320px) {
-  .infoWraper {
-    width: 40%;
-  }
-}
-.infoWraper:not(:last-of-type) {
-  border-right: 1px solid #bf8756;
 }
 
 a {
