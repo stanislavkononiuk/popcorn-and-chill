@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { popular } from '../actions';
 import Movie from '../components/Movie';
 import { popularMovies } from '../API/API';
-import PopularCSS from './Popular.module.css';
+import MovieListCSS from './MovieList.module.css';
 
 const MoviesList = () => {
   const [nextPage, setNextPage] = useState(2);
@@ -36,9 +36,13 @@ const MoviesList = () => {
   }
   return (
     <>
-      <div className={PopularCSS.wrapper}>
+      <div className={MovieListCSS.wrapper}>
         {popMovies.map((movie) => (
-          <Link className={PopularCSS.link} to={`detail/${movie.id}`} key={movie.id}>
+          <Link
+            className={MovieListCSS.link}
+            to={`detail/${movie.id}`}
+            key={movie.id}
+          >
             <Movie
               title={movie.title}
               score={movie.vote_average}
@@ -47,19 +51,27 @@ const MoviesList = () => {
           </Link>
         ))}
       </div>
-      <div className={PopularCSS.btnWraper}>
+      <div className={MovieListCSS.btnWraper}>
         {previousPage >= 1 && (
-        <button className={PopularCSS.btnLeft} type="button" onClick={moviesPreviousPage}>
-          page:
-          {' '}
-          {previousPage}
-        </button>
+          <button
+            className={MovieListCSS.btnLeft}
+            type="button"
+            onClick={moviesPreviousPage}
+          >
+            page:
+            {' '}
+            {previousPage}
+          </button>
         )}
-        <h3 className={PopularCSS.currentBtn}>
+        <h3 className={MovieListCSS.currentBtn}>
           current page:
           {nextPage - 1}
         </h3>
-        <button className={PopularCSS.btnRight} type="button" onClick={moviesNextPage}>
+        <button
+          className={MovieListCSS.btnRight}
+          type="button"
+          onClick={moviesNextPage}
+        >
           page:
           {' '}
           {nextPage}
